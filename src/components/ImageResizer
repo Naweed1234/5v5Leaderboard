@@ -1,0 +1,24 @@
+export const Leaderboard = [
+  {
+    name: "Naweed#NA1",
+    location: "India",
+    winrate: 1550,
+    img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/1117.png",
+    dt: "2022-02-10",
+    puuid:
+      "mn0Zwxwc6W3qf_NGl9228cN1e3Cd_kcFa6tEzIyWiFXxBy7RB3vQ8PyyWHGSXM41z1kRNV7pQcXS0g",
+  },
+  // other objects...
+];
+
+function adjustImageSizes(data) {
+  const imageSize = "64";
+  return data.map((item) => ({
+    ...item,
+    img: item.img.replace(/\/\d+\.png$/, `/${imageSize}.png`),
+  }));
+}
+
+const adjustedLeaderboard = adjustImageSizes(Leaderboard);
+
+export { adjustedLeaderboard };
