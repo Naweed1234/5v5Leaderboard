@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# League of Legends Inhouse 5v5 Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the League of Legends Inhouse 5v5 Tracker! This React application is designed to help you track the performance of players in your inhouse 5v5 matches using the League of Legends API. With this tool, you can easily see who has the best stats and performance across various matches.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Track Player Stats:** The app fetches data from the League of Legends API to display detailed statistics for each player participating in your inhouse 5v5 matches.
+- **Compare Performance:** Easily compare stats such as kills, deaths, assists, and more to determine who is performing the best in your matches.
+- **User-Friendly Interface:** The application is designed with a clean and intuitive user interface to make it easy for anyone to view and understand player performance.
 
-### `npm start`
+## How to Use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Set Up API Key:** Before using the application, you'll need to obtain an API key from Riot Games Developer Portal (https://developer.riotgames.com/) and configure it within the application.
+2. **Start Tracking:** Once the API key is set up, simply launch the application and input the necessary match details to retrieve player stats.
+3. **View Stats:** After fetching the data, you'll be presented with detailed statistics for each player, allowing you to analyze their performance.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To install and run the application locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Install dependencies using npm or yarn:
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+or
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+yarn install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Set up your Riot Games API key by creating a `.env` file in the root directory and adding your API key like so:
 
-### `npm run eject`
+```bash
+REACT_APP_API_KEY=your_api_key_here
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Start the application:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+or
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+yarn start
+```
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React.js
+- League of Legends API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Feedback and Contributions
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for using the League of Legends Inhouse 5v5 Tracker! If you have any questions or need assistance, don't hesitate to reach out. Enjoy tracking your inhouse matches and may the best team win!
