@@ -1,5 +1,4 @@
 import React from "react";
-
 export default function profiles({ Leaderboard }) {
   return <div id="profile">{Item(Leaderboard)}</div>;
 }
@@ -18,7 +17,10 @@ function Item(data) {
             </div>
           </div>
           <div className="item">
-            <span>{value.winrate}</span>
+            <span>
+              <span class="bold-blue">{value.winrate.toFixed(2)}%</span> /{" "}
+              {value.wins}W {value.losses}L
+            </span>
           </div>
         </div>
       ))}

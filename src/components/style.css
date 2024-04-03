@@ -37,6 +37,7 @@
     border-radius: 50px;
     background-color: transparent;
     cursor: pointer;
+    margin-bottom: 4em;
 }
 
 .board .duration > button:hover{
@@ -66,6 +67,7 @@
 #profile .flex .item{
     display: flex;
     align-items: center;
+    font-size: larger;
 }
 
 #profile .flex img{
@@ -79,4 +81,17 @@
 
 .text-dark{
     color: var(--color-dark);
+}
+
+.bold-blue {
+    font-weight: bold;
+    color: blue;
+}
+
+.header{
+            border-top: 50em;
+            padding: .1em 1em;
+            border-radius: 10px;
+            background-color: transparent;
+            text-align: left;
 }

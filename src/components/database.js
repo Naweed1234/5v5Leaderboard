@@ -1,8 +1,10 @@
 export const Leaderboard = [
   {
     name: "Naweed#NA1",
-    location: "India",
-    winrate: 1550,
+    location: "Jungle",
+    winrate: 50,
+    wins: 15,
+    losses: 5,
     img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/1117.png",
     dt: "2022-02-10",
     puuid:
@@ -10,8 +12,10 @@ export const Leaderboard = [
   },
   {
     name: "Toraboss#NA1",
-    location: "India",
-    winrate: 1550,
+    location: "Top",
+    winrate: 20,
+    wins: 10,
+    losses: 5,
     img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/2088.png",
     dt: "2022-02-10",
     puuid:
@@ -19,8 +23,10 @@ export const Leaderboard = [
   },
   {
     name: "Jacob#Supp",
-    location: "India",
-    winrate: 57,
+    location: "Support",
+    winrate: 40,
+    wins: 10,
+    losses: 5,
     img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/622.png",
     dt: "2022-02-10",
     puuid:
@@ -28,8 +34,10 @@ export const Leaderboard = [
   },
   {
     name: "Mich#NA1",
-    location: "India",
-    winrate: 1550,
+    location: "Mid",
+    wins: 10,
+    losses: 5,
+    winrate: 5,
     img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/657.png",
     dt: "2022-02-10",
     puuid:
@@ -37,8 +45,9 @@ export const Leaderboard = [
   },
   {
     name: "Nivy#NA1",
-    location: "India",
-    winrate: 1550,
+    location: "Support",
+    wins: 10,
+    losses: 5,
     img: "https://ddragon.leagueoflegends.com/cdn/11.6.1/img/profileicon/588.png", //588
     dt: "2022-02-10",
     puuid:
@@ -46,14 +55,13 @@ export const Leaderboard = [
   },
 ];
 
-function adjustImageSizes(data) {
-  const imageSize = "64";
-  return data.map((item) => ({
-    ...item,
-    img: item.img.replace(/\/\d+\.png$/, `/${imageSize}.png`),
+function adjustWinrate(data) {
+  return data.map((player) => ({
+    ...player,
+    winrate: (player.wins / (player.wins + player.losses)) * 100, // Calculate winrate as a percentage
   }));
 }
 
-const adjustedLeaderboard = adjustImageSizes(Leaderboard);
+const adjustedLeaderboard = adjustWinrate(Leaderboard);
 
 export { adjustedLeaderboard };

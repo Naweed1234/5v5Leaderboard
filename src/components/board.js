@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Profiles from "./profiles";
-import { Leaderboard } from "./database";
+import { adjustedLeaderboard } from "./database"; // Adjust the path accordingly
+import { Leaderboard } from "./database"; // Adjust the path accordingly
 
 export default function Board() {
   const [period, setPeriod] = useState(0);
@@ -12,7 +13,6 @@ export default function Board() {
   return (
     <div className="board">
       <h1 className="leaderboard">5v5 Leaderboard</h1>
-
       <div className="duration">
         <button
           onClick={handleClick}
@@ -21,11 +21,37 @@ export default function Board() {
         >
           All-Time
         </button>
-        <button>7 Days (Coming Soon)</button>
-        <button>24hr (Coming Soon)</button>
+        <button
+          onClick={handleClick}
+          data-id="0"
+          style={{ marginBottom: "0em" }}
+        >
+          7 Days (Coming Soon)
+        </button>
+        <button
+          onClick={handleClick}
+          data-id="0"
+          style={{ marginBottom: "0em" }}
+        >
+          7 Days (Coming Soon)
+        </button>
       </div>
-
-      <Profiles Leaderboard={between(Leaderboard, period)}></Profiles>
+      <div
+        className="header"
+        style={{
+          marginTop: "40px",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <h1 style={{ textDecoration: "underline", fontWeight: "bold" }}>
+          SummonerName
+        </h1>
+        <h1 style={{ textDecoration: "underline", fontWeight: "bold" }}>
+          Winrate
+        </h1>
+      </div>
+      <Profiles Leaderboard={between(adjustedLeaderboard, period)}></Profiles>{" "}
     </div>
   );
 }
